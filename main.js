@@ -31,11 +31,15 @@ function checkInputs() {
   }
   if (passwordValue === "") {
     setErrorFor(password, "Password cannot be blank");
+  } else if (passwordValue.length <= 5) {
+    setErrorFor(password, "Password need atleast 6 characters");
   } else {
     setSuccesFor(password);
   }
   if (password_2Value === "") {
     setErrorFor(password_2, "Password cannot be blank");
+  } else if (password_2Value.length <= 5) {
+    setErrorFor(password_2, "Password need atleast 6 characters");
   } else if (passwordValue !== password_2Value) {
     setErrorFor(password_2, "Passwords does not match");
   } else {
