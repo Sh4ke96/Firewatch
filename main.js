@@ -19,6 +19,8 @@ function checkInputs() {
 
   if (usernameValue === "") {
     setErrorFor(username, "Username cannot be blank");
+  } else if (usernameValue.length <= 5) {
+    setErrorFor(username, "Username need atleast 6 characters");
   } else {
     setSuccesFor(username);
   }
