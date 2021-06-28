@@ -3,6 +3,8 @@ const username = document.getElementById("username");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const password_2 = document.getElementById("password_2");
+const modal = document.getElementById("modal");
+const modal_text = document.getElementById("modal__text");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -39,6 +41,18 @@ function checkInputs() {
   } else {
     setSuccesFor(password_2);
   }
+  if (
+    username == "" ||
+    emailValue == "" ||
+    passwordValue == "" ||
+    password_2Value == ""
+  ) {
+    modal.style.display = "flex";
+    modal_text.innerText = "All fields are required!";
+  } else {
+    modal.style.display = "flex";
+    modal_text.innerText = "Succesfull register account!";
+  }
 }
 
 function setErrorFor(input, message) {
@@ -58,3 +72,9 @@ function isEmail(email) {
     email
   );
 }
+
+window.onclick = function (event) {
+  if (event.target !== modal) {
+    modal.style.display = "none";
+  }
+};

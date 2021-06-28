@@ -9,6 +9,11 @@
   </head>
   <body>
     <div class="wrapper">
+      <div id="modal" class="modal__container">
+        <div class="modal__content">
+          <p id="modal__text" class="modal__p"></p>
+        </div>
+      </div>
       <div class="form__container">
         <form id="form" class="form__wrapper">
           <h2 class="form__title">Create Account</h2>
@@ -29,14 +34,14 @@
             </div>
             <div class="form__control">
               <label for="Password">Password</label>
-              <input type="text" placeholder="Password" id="password" />
+              <input type="password" placeholder="Password" id="password" />
               <i class="fas fa-check-circle"></i>
               <i class="fas fa-exclamation-circle"></i>
               <small class="form__error">Error message</small>
             </div>
             <div class="form__control">
               <label for="Password">Password Check</label>
-              <input type="text" placeholder="Password-2" id="password_2" />
+              <input type="password" placeholder="Password-2" id="password_2" />
               <i class="fas fa-check-circle"></i>
               <i class="fas fa-exclamation-circle"></i>
               <small class="form__error">Error message</small>

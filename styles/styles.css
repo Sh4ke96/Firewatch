@@ -11,6 +11,8 @@
   background-image: url(https://sh4ke96.github.io/Firewatch/img/bg.png);
   background-size: cover;
   background-position: center center;
+  display: flex;
+  justify-content: center;
 }
 
 .form__container {
@@ -124,4 +126,47 @@ label {
 
 .form__control.error small {
   visibility: visible;
+}
+
+.modal__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 500px;
+  height: 100px;
+  background-color: #5c1f1e;
+  display: none;
+  margin-top: 10px;
+  border-radius: 5px;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.modal__content {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.modal__close-icon {
+  position: absolute;
+  right: -60px;
+  top: -30px;
+}
+
+.modal__close-icon:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .modal__container {
+    text-align: center;
+    margin-top: 300px;
+  }
 }
